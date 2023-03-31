@@ -1,0 +1,92 @@
+# import urllib.request
+# # Write line to file crea archivo y escrite primera linea 
+# exmp2 = 'Example2.txt'
+# with open(exmp2, 'w') as writefile:
+#     writefile.write("This is line A")
+
+
+# # Read file / lo visualiza 
+
+# with open(exmp2, 'r') as testwritefile:
+#     print(testwritefile.read())
+
+# # Write lines to file /pero sobreescribe 
+
+# with open(exmp2, 'w') as writefile:
+#     writefile.write("Es uno A\n")
+#     writefile.write("Es cuadro line B\n")
+
+# # El método .write() funciona de manera similar al método .readline(), excepto que en lugar 
+# # de leer una nueva línea, escribe una nueva línea. El proceso se ilustra en la figura. La codificación de colores
+# # diferente de la cuadrícula representa una nueva línea agregada al archivo después de cada llamada al método.
+
+# # Read file / lo visualiza 
+
+# with open(exmp2, 'r') as testwritefile:
+#     print(testwritefile.read())
+
+
+# Lines = ["This is line 1\n", "This is line B\n", "This is line C\n"]
+exmp3 = 'Example3.txt'
+# # Escribir las cadenas de la lista en un archivo de texto
+# with open(exmp3, 'w+') as writefile:
+#     for line in Lines:
+#         print(line)
+#         writefile.write(line)
+
+
+
+
+# w cuando sobreescribo todo y pierdo la información de lo
+# with open (exmp3, 'w') as writefile:
+#     writefile.write('sobreescribe')
+# with open(exmp3, 'r') as testwritefile:
+#     print(testwritefile.read())
+
+# Archivos adjuntos
+
+# with open(exmp3, 'a+') as testwritefile:
+#     print("Locacion inicial: {}".format(testwritefile.tell()))
+
+#     data = testwritefile.read() 
+#     if (not data):# Cadenas vacías devuelven falsa en Python
+#         print("No lee nada")
+#     else:
+#         print(testwritefile.read())
+#     testwritefile.seek(8,0) # mover 0 bytes desde el principio.
+#     print("\nNueva locacion : {}".format(testwritefile.tell()))
+#     data = testwritefile.read()
+#     if (not data):
+#         print("No lee nada")
+#     else:
+#         print(data)
+    # print("locacion despues de leer: {}".format(testwritefile.tell()))
+
+
+
+
+    ## r Truncate
+
+with open(exmp3, 'r+') as testwritefile:
+    data = testwritefile.readlines()
+    testwritefile.seek(2,0) #escribe al principio del archivo 
+   
+    testwritefile.write("Line 1" + "\n")
+    testwritefile.write("Line 2" + "\n")
+    testwritefile.write("Line 3" + "\n")
+    testwritefile.write("finished\n")
+    #Uncomment the line below
+    #testwritefile.truncate()
+    testwritefile.seek(0,0)
+    print(testwritefile.read())
+
+#Copiar un archivo
+# Copy file to another
+
+with open('Example2.txt','r') as readfile:
+    with open('Example3.txt','a+') as writefile:
+          for line in readfile:
+                writefile.write(line)
+            
+with open('Example3.txt', 'r+') as testwritefile:
+     print(testwritefile.read())
