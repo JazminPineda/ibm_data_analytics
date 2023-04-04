@@ -24,7 +24,9 @@ def cleanFiles(currentMem,exMem):
                     appendFile.write(member) # separa los inactivos, si esta en la lista lo escribe
                 else:
                     writeFile.write(member)  # rescribe los activos
-            writeFile.truncate()
+            writeFile.truncate() # se coloca para que trunque los datos y se elimine las lienas siguientes
+            #y finaliza el archivo en la última linea escrita.
+            #Esto reducirá el archivo a sus datos y eliminará todo lo que sigue. 
                 
 memReg = 'members.txt'
 exReg = 'inactive.txt'
