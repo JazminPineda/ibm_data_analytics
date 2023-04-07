@@ -1,4 +1,6 @@
 import numpy as np
+from matplotlib import pyplot as plt
+
 
 arr1 = np.array([10, 11, 12, 13, 14, 15])
 arr2 = np.array([20, 21, 22, 23, 24, 25])
@@ -40,5 +42,14 @@ arr1 = arr + 5
 print(arr1)
 
 
-# Funciones Universales
 
+# array numpy dentro de [5, 4] y 6 elementos Make a numpy array within [5, 4] and 6 elements
+
+a = [5,4,5,4,5,4]
+b = np.array(a)
+print(type(b))
+
+# Lo correcto es 
+# Enter your code here
+c = np.linspace(5, 4, num=6)
+print(c)
