@@ -6,9 +6,9 @@ import numpy as np
 
 # Metodo reforzado para multiplicar listas
 
-def impar(x):
-    if x % 2 == 1:
-        return x
+# def impar(x):
+#     if x % 2 == 1:
+#         return x
      
 def method_evaluar(l1, l2):
     l3 = np.concatenate((l1, l2), axis=0)
